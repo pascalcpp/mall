@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://mysql-master.mall:3306/mall_pms?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  application:
+    name: mall-product
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  thymeleaf:
+    cache: false
+  cache:
+    type: redis
+    redis:
+      time-to-live: 3600000
+      cache-null-values: true
+
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+
+
+# not compatibility for this version
+#alibaba:
+#  cloud:
+#    secret-key: ${key}
+#    access-key: ${key}
+#    oss:
+#      endpoint: oss-cn-chengdu.aliyuncs.com

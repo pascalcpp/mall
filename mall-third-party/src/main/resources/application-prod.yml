@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    alicloud:
+      access-key: ${key}
+      secret-key: ${key}
+      oss:
+        endpoint: oss-cn-chengdu.aliyuncs.com
+        bucket: mall-xpcf
+      sms:
+        host: https://smssend.shumaidata.com
+        path: /sms/send
+        method: POST
+        templateId: M09DD535F4
+        appcode: 867c9232dcd345a895942221c4680a0a
+
+  application:
+    name: mall-third-party
